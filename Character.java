@@ -38,7 +38,7 @@ public class Character<E> {
         this.exp = 0;
         this.inv = 8;
         inventory = (Items[]) new Items[10];
-        equipment = (Items[]) new Items[5];
+        equipment = (Items[]) new Items[7];
         skills = (Skills[]) new Skills[7];
         skills[1] = skill1;
         name = "";
@@ -122,6 +122,130 @@ public class Character<E> {
         System.out.println("Enter the name of your character: ");
         this.name = sc.nextLine();
     }
+    public void getStarterEquip(){
+        Items spoon = new Items("Spoon", 1, 0, 2, 0, 0, 0);
+        Items rags = new Items("Rags", 3, 0, 0, 0, 0, 3);
+        Items knife = new Items("Knife", 1, 0, 3, 0, 0, 0);
+        Items commonclothes = new Items("Common Clothes", 3, 0, 0, 0, 0, 4);
+        Items shortsword = new Items("Shortsword", 1, 0, 6, 0, 0, 0);
+        Items ironshield = new Items("Iron Shield", 3, 0, 0, 0, 0, 5);
+        Items ironhelmet = new Items("Iron Helmet", 3, 0, 0, 0, 0, 4);
+        Items ironarmor = new Items("Iron Armor", 3, 0, 0, 0, 0, 15);
+        Items irongauntlets = new Items("Iron Gauntlets",3, 0, 0, 0, 0, 4);
+        Items irongreaves = new Items("Iron Greaves",3, 0, 0, 0, 0, 4);
+        Items staff = new Items("Staff", 1, 0, 5, 0, 0, 0);
+        Items robes = new Items("Robes", 3, 0, 0, 0, 0, 5);
+        Items smallHpPot = new Items("Small Health Potion", 4, 10, 0, 0, 0, 0);
+        Items dagger = new Items("Dagger", 1, 0, 5, 0, 0, 0);
+        Items crossbow = new Items("Crossbow", 2, 0, 7, 0, 0, 0);
+        Items leatherhelmet = new Items("Leather Helmet", 3, 0, 0, 0, 0, 3);
+        Items leatherarmor = new Items("Leather Armor", 3, 0, 0, 0, 0, 10);
+        Items leathergauntlets = new Items("Leather Gauntlets",3, 0, 0, 0, 0, 3);
+        Items leatherboots = new Items("Leather Boots",3, 0, 0, 0, 0, 3);
+        Items holytalisman = new Items("Holy Talisman", 3, 0, 0, 0, 0, 5);
+        Items bow = new Items("Bow", 2, 0, 5, 0, 0, 0);
+        String temp;
+        int i = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("How would you like your character to start off?");
+        System.out.println("\tHobo - Starts with a spoon and rags.");
+        System.out.println("\tCommoner - Starts with a knife and common clothes.");
+        System.out.println("\tKnight - Starts with a shortsword, iron shield, and all four pieces of iron armor.");
+        System.out.println("\tMage - Starts with a satff, knife, robes, and small health potion.");
+        System.out.println("\tRogue - Starts with a dagger, crossbow, and all four pieces of leather armor.");
+        System.out.println("\tPaladin - Starts with a shortsword, holy talisman, and all four pieces of iron armor.");
+        System.out.println("\tHunter - Starts with a bow, dagger, and all four pieces of leather armor.");
+        temp = sc.nextLine().toLowerCase();
+        while(i == 0){
+            switch(temp){
+                case "hobo":
+                    equipment = spoon.ADDequipment(equipment);
+                    equipment = rags.ADDequipment(equipment);
+                    stats = spoon.ADDstats(stats);
+                    stats = rags.ADDstats(stats);
+                    i++;
+                    break;
+                case "commoner":
+                    equipment = knife.ADDequipment(equipment);
+                    equipment = commonclothes.ADDequipment(equipment);
+                    stats = knife.ADDstats(stats);
+                    stats = commonclothes.ADDstats(stats);
+                    i++;
+                    break;
+                case "knight":
+                    equipment = shortsword.ADDequipment(equipment);
+                    equipment = ironshield.ADDequipment(equipment);
+                    equipment = ironhelmet.ADDequipment(equipment);
+                    equipment = ironarmor.ADDequipment(equipment);
+                    equipment = irongauntlets.ADDequipment(equipment);
+                    equipment = irongreaves.ADDequipment(equipment);
+                    stats = shortsword.ADDstats(stats);
+                    stats = ironshield.ADDstats(stats);
+                    stats = ironhelmet.ADDstats(stats);
+                    stats = ironarmor.ADDstats(stats);
+                    stats = irongauntlets.ADDstats(stats);
+                    stats = irongreaves.ADDstats(stats);
+                    i++;
+                    break;
+                case "mage":
+                    equipment = staff.ADDequipment(equipment);
+                    equipment = robes.ADDequipment(equipment);
+                    inventory = smallHpPot.ADDinventory(inventory);
+                    stats = staff.ADDstats(stats);
+                    stats = robes.ADDstats(stats);
+                    i++;
+                    break;
+                case "rogue":
+                    equipment = dagger.ADDequipment(equipment);
+                    equipment = crossbow.ADDequipment(equipment);
+                    equipment = leatherhelmet.ADDequipment(equipment);
+                    equipment = leatherarmor.ADDequipment(equipment);
+                    equipment = leathergauntlets.ADDequipment(equipment);
+                    equipment = leatherboots.ADDequipment(equipment);
+                    stats = dagger.ADDstats(stats);
+                    stats = crossbow.ADDstats(stats);
+                    stats = leatherhelmet.ADDstats(stats);
+                    stats = leatherarmor.ADDstats(stats);
+                    stats = leathergauntlets.ADDstats(stats);
+                    stats = leatherboots.ADDstats(stats);
+                    i++;
+                    break;
+                case "paladin":
+                    equipment = shortsword.ADDequipment(equipment);
+                    equipment = holytalisman.ADDequipment(equipment);
+                    equipment = ironhelmet.ADDequipment(equipment);
+                    equipment = ironarmor.ADDequipment(equipment);
+                    equipment = irongauntlets.ADDequipment(equipment);
+                    equipment = irongreaves.ADDequipment(equipment);
+                    stats = shortsword.ADDstats(stats);
+                    stats = holytalisman.ADDstats(stats);
+                    stats = ironhelmet.ADDstats(stats);
+                    stats = ironarmor.ADDstats(stats);
+                    stats = irongauntlets.ADDstats(stats);
+                    stats = irongreaves.ADDstats(stats);
+                    i++;
+                    break;
+                case "hunter":
+                    equipment = bow.ADDequipment(equipment);
+                    equipment = dagger.ADDequipment(equipment);
+                    equipment = leatherhelmet.ADDequipment(equipment);
+                    equipment = leatherarmor.ADDequipment(equipment);
+                    equipment = leathergauntlets.ADDequipment(equipment);
+                    equipment = leatherboots.ADDequipment(equipment);
+                    stats = bow.ADDstats(stats);
+                    stats = dagger.ADDstats(stats);
+                    stats = leatherhelmet.ADDstats(stats);
+                    stats = leatherarmor.ADDstats(stats);
+                    stats = leathergauntlets.ADDstats(stats);
+                    stats = leatherboots.ADDstats(stats);
+                    i++;
+                    break;
+                default:
+                    System.out.println("\nPlease choose an option from above.\n");
+                    temp = sc.nextLine().toLowerCase();
+            }
+        }
+    }
     public void gainExp(int gain){
         Scanner sc = new Scanner(System.in);
         int temp = 0;
@@ -200,6 +324,8 @@ public class Character<E> {
      public void help()
      {
          System.out.println("\n\n\tBasic Commands:");
+         System.out.println("\t\t\"Stats\" - This displays your player chracter's basic stats.");
+         System.out.println("\t\t\"Skills\" - This displays your player chracter's acquired skills.");
          
      }
      public void combatHelp()
