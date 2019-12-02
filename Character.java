@@ -322,6 +322,15 @@ public class Character<E> {
      public void changeRep(int temp){
          stats[4] += temp;
      }
+     public void allSkillRecharge(){
+        for (Skills skill : skills) {
+            if (skill != null)
+                skill.recharge();
+        }
+     }
+     public void healthRegen(){
+         this.health = maxHealth;
+     }
      public void help()
      {
          System.out.println("\n\n\tBasic Commands:");
@@ -342,7 +351,7 @@ public class Character<E> {
      {
          System.out.println("\n\n\tCombat Commands:");
          System.out.println("\tAttack (or \"a\") - Attack the enemy head on with a melee attack");
-         System.out.println("\tUse Skill (or \"us\")- Uses your character's skill! It can only be used once per battle.");
+         System.out.println("\tUse Skill (or \"us\")- Use one of your character's skills! They can only be used once per battle.");
          System.out.println("\tSkill Info (or \"si\") - Display info on one of your character's skills");
          System.out.println("\tUse (or \"u\") - Use any usable item from your bag \n\t(will consume a turn, even if you try using an \"empty\" item)");
          System.out.println("\tItem Stats (\"is\") - Show how a specific item will echange your character stats when equipped");
