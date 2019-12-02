@@ -12,7 +12,7 @@ public class Character<E> {
     Skills[] skills;
     
     int difficultyNum = 0; //Used for determining stats of enemies
-    Skills skill1 = new Skills("Boost ✓", 0, 0, true);
+    Skills skill1 = new Skills("Boost", 0, 0, true);
     Skills skill2 = new Skills("Shield Bash", 15, 0, true);
     Skills skill3 = new Skills("Firebolt", 15, 0, true);
     Skills skill4 = new Skills("Backstab", 15, 0, true);
@@ -39,8 +39,8 @@ public class Character<E> {
         this.inv = 8;
         inventory = (Items[]) new Items[10];
         equipment = (Items[]) new Items[7];
-        skills = (Skills[]) new Skills[7];
-        skills[1] = skill1;
+        skills = (Skills[]) new Skills[15];
+        skills[0] = skill1;
         name = "";
         gameClass = "";
         maxExp = 100;
@@ -283,6 +283,7 @@ public class Character<E> {
                 if(temp == 1 && !this.hasSkill(skill) && this.skilltree.skillAvailable(skill)){
                     System.out.println("You have unlocked the " + skill.name + " skill!");
                     System.out.println("\nInformation: " + skill.getSkillInfo());
+                    skills[lvl] = skill;
                     skilltree.skillGet(skill);
                     break;
                 }
@@ -324,13 +325,28 @@ public class Character<E> {
      public void help()
      {
          System.out.println("\n\n\tBasic Commands:");
-         System.out.println("\t\t\"Stats\" - This displays your player chracter's basic stats.");
-         System.out.println("\t\t\"Skills\" - This displays your player chracter's acquired skills.");
-         
+         System.out.println("\t\tForward (or f) - Move forward");
+         System.out.println("\t\tEquipment (or \"se\") - Show player equipment");
+         System.out.println("\t\tBag (or \"b\") - Display player inventory");
+         System.out.println("\t\tStats (or \"s\") - Display current player stats");
+         System.out.println("\t\tSkills (or \"sk\") - Display player's skill tree");
+         System.out.println("\t\tSkill Info (or \"si\") - Display info on one of your character's skills");
+         System.out.println("\t\tItem Stats (or \"is\") - Show how a specific item will echange your character stats when equipped");
+         System.out.println("\n\tCommands for Managing Items:");
+         System.out.println("\t\tDrop (or \"d\") - Drop an item from your bag or equipment");
+         System.out.println("\t\tUse (or \"u\") - Use any usable item from your bag");
+         System.out.println("\t\tEquip (or \"e\") - Equip an item from your bag to your equipment");
+         System.out.println("\t\tUnequip (or \"ue\") - Unequip an item from your equipment and place it in your bag");
      }
      public void combatHelp()
      {
          System.out.println("\n\n\tCombat Commands:");
-         
+         System.out.println("\tAttack (or \"a\") - Attack the enemy head on with a melee attack");
+         System.out.println("\tUse Skill (or \"us\")- Uses your character's skill! It can only be used once per battle.");
+         System.out.println("\tSkill Info (or \"si\") - Display info on one of your character's skills");
+         System.out.println("\tUse (or \"u\") - Use any usable item from your bag \n\t(will consume a turn, even if you try using an \"empty\" item)");
+         System.out.println("\tItem Stats (\"is\") - Show how a specific item will echange your character stats when equipped");
+         System.out.println("\tIdentify (or \"i\") - Use your wisdom to possibly identify enemy stats! (will consume a turn!)");
+         System.out.println("\tAny time during combat you may CHECK your current equipment, inventory, and current stats; will NOT consume a turn");
      }
 }
