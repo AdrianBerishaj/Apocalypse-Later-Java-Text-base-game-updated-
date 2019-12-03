@@ -38,8 +38,8 @@ public class Chest {
     Items smallHpPot = new Items("Small Health Potion", 4, 25, 0, 0, 0, 0);
     Items mediumHpPot = new Items("Health Potion", 4, 50, 0, 0, 0, 0);
     Items largeHpPot = new Items("Max Health Potion", 4, 100, 0, 0, 0, 0);
-    Items baseDmgPot = new Items("Potion of the Great Fighter", 4, 0, 1, 0, 0, 0);
-    Items dmgRedPot = new Items("Potion of the Stout Defense", 4, 0, 0, 0, 0, 1);
+    Items baseDmgPot = new Items("Potion of the Great Fighter", 4, 0, 5, 0, 0, 0);
+    Items dmgRedPot = new Items("Potion of the Stout Defense", 4, 0, 0, 0, 0, 5);
     Items[] possItems = {longsword, chainmail, mace, bow, BLK_leather, staff, BLK_robes, robes, rags, knife, dagger, crossbow, shortsword, leatherarmor, ironarmor, platemail, leathershield, steelshield, ironshield, holytalisman, leatherhelmet, steelhelmet, ironhelmet, irongreaves, leatherboots, steelgreaves, leathergauntlets, irongauntlets, steelgauntlets, katana, scimitar, smallHpPot, mediumHpPot, largeHpPot, baseDmgPot, dmgRedPot};
     public Chest(){
         rand = new Random().nextInt(possItems.length);
