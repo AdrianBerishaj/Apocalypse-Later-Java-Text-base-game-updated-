@@ -289,7 +289,8 @@ public class Character<E> {
      }
      public void showSkills(){
         for (Skills skills1 : skills) {
-           System.out.println(skills1.getName()); 
+            if(skills1 != null) 
+                System.out.println(skills1.getName()); 
         }
      }
      public boolean hasSkill(Skills temp){
