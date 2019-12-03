@@ -315,7 +315,7 @@ public class Character<E> {
      public void help()
      {
          System.out.println("\n\n\tBasic Commands:");
-         System.out.println("\t\tForward (or f) - Move forward");
+         System.out.println("\t\tForward (or \"f\") - Move forward");
          System.out.println("\t\tEquipment (or \"se\") - Show player equipment");
          System.out.println("\t\tBag (or \"b\") - Display player inventory");
          System.out.println("\t\tStats (or \"s\") - Display current player stats");
