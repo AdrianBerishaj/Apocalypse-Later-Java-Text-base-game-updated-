@@ -123,10 +123,6 @@ public class Character<E> {
         this.name = sc.nextLine();
     }
     public void getStarterEquip(){
-        Items spoon = new Items("Spoon", 1, 0, 2, 0, 0, 0);
-        Items rags = new Items("Rags", 3, 0, 0, 0, 0, 3);
-        Items knife = new Items("Knife", 1, 0, 3, 0, 0, 0);
-        Items commonclothes = new Items("Common Clothes", 3, 0, 0, 0, 0, 4);
         Items shortsword = new Items("Shortsword", 1, 0, 6, 0, 0, 0);
         Items ironshield = new Items("Iron Shield", 3, 0, 0, 0, 0, 5);
         Items ironhelmet = new Items("Iron Helmet", 3, 0, 0, 0, 0, 4);
@@ -148,8 +144,6 @@ public class Character<E> {
         int i = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("How would you like your character to start off?");
-        System.out.println("\tHobo - Starts with a spoon and rags.");
-        System.out.println("\tCommoner - Starts with a knife and common clothes.");
         System.out.println("\tKnight - Starts with a shortsword, iron shield, and all four pieces of iron armor.");
         System.out.println("\tMage - Starts with a satff, knife, robes, and small health potion.");
         System.out.println("\tRogue - Starts with a dagger, crossbow, and all four pieces of leather armor.");
@@ -158,20 +152,6 @@ public class Character<E> {
         temp = sc.nextLine().toLowerCase();
         while(i == 0){
             switch(temp){
-                case "hobo":
-                    equipment = spoon.ADDequipment(equipment);
-                    equipment = rags.ADDequipment(equipment);
-                    stats = spoon.ADDstats(stats);
-                    stats = rags.ADDstats(stats);
-                    i++;
-                    break;
-                case "commoner":
-                    equipment = knife.ADDequipment(equipment);
-                    equipment = commonclothes.ADDequipment(equipment);
-                    stats = knife.ADDstats(stats);
-                    stats = commonclothes.ADDstats(stats);
-                    i++;
-                    break;
                 case "knight":
                     equipment = shortsword.ADDequipment(equipment);
                     equipment = ironshield.ADDequipment(equipment);
