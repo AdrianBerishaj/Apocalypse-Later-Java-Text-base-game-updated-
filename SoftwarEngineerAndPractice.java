@@ -69,7 +69,7 @@ public class SoftwarEngineerAndPractice {
                                 int area1_encounter;
                                 area1_encounter = area1.area_1_Encounter(rand.nextInt(4), player.stats[4], player.name);
                                 if(area1_encounter<1000)
-                                    player.stats[0] = player.stats[0] - area1_encounter;
+                                    player.stats[1] = player.stats[1] - area1_encounter;
                                 else if(area1_encounter == 1111)
                                 {
                                     Items katana = new Items("Katana", 1, 0, 10, 0, 0, 0);
@@ -108,8 +108,8 @@ public class SoftwarEngineerAndPractice {
                                                     }
                                                     if(skillCarry == 0){
                                                         System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                        player.stats[0] -= EdmgDealt;
-                                                        if (player.stats[0]<=0) {
+                                                        player.stats[1] -= EdmgDealt;
+                                                        if (player.stats[1]<=0) {
                                                             System.out.println("YOU DIED");
                                                             System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                             area1_cleared = true;
@@ -227,8 +227,8 @@ public class SoftwarEngineerAndPractice {
                                                         if(skillCarry == 0){
                                                             EdmgDealt = rand.nextInt(rogue.enemyStats[2]);
                                                             System.out.println("The enemy deals " + EdmgDealt + " damage to you!");
-                                                            player.stats[0] -= EdmgDealt;
-                                                            if (player.stats[0]<=0) 
+                                                            player.stats[1] -= EdmgDealt;
+                                                            if (player.stats[1]<=0) 
                                                             {
                                                                 System.out.println("YOU DIED");
                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
@@ -299,7 +299,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[1] != 0){
                                                                         System.out.println("You have healed " + array[1] + " health!");
-                                                                        player.stats[0] += array[1];
+                                                                        player.stats[1] += array[1];
                                                                     }
                                                                     if (array[2] != 0){
                                                                         System.out.println("The enemy's turn has been skipped!");
@@ -317,8 +317,8 @@ public class SoftwarEngineerAndPractice {
                                                                         if(array [3] == 0){
                                                                             EdmgDealt = rand.nextInt(rogue.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -334,8 +334,8 @@ public class SoftwarEngineerAndPractice {
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -403,8 +403,8 @@ public class SoftwarEngineerAndPractice {
                                                     break OUTER;
                                                 }
                                                 System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                player.stats[0] -= EdmgDealt;
-                                                if (player.stats[0]<=0) {
+                                                player.stats[1] -= EdmgDealt;
+                                                if (player.stats[1]<=0) {
                                                     System.out.println("YOU DIED");
                                                     System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                     area1_cleared = true;
@@ -514,8 +514,8 @@ public class SoftwarEngineerAndPractice {
                                                         if(skillCarry == 0){
                                                             EdmgDealt = rand.nextInt(a1_enemy.enemyStats[2]);
                                                             System.out.println("The enemy deals " + EdmgDealt + " damage to you!");
-                                                            player.stats[0] -= EdmgDealt;
-                                                            if (player.stats[0]<=0) 
+                                                            player.stats[1] -= EdmgDealt;
+                                                            if (player.stats[1]<=0) 
                                                             {
                                                                 System.out.println("YOU DIED");
                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
@@ -583,7 +583,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[1] != 0){
                                                                         System.out.println("You have healed " + array[1] + " health!");
-                                                                        player.stats[0] += array[1];
+                                                                        player.stats[1] += array[1];
                                                                     }
                                                                     if (array[2] != 0){
                                                                         System.out.println("The enemy's turn has been skipped!");
@@ -601,8 +601,8 @@ public class SoftwarEngineerAndPractice {
                                                                         if(array [3] == 0){
                                                                             EdmgDealt = rand.nextInt(a1_enemy.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -618,8 +618,8 @@ public class SoftwarEngineerAndPractice {
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -705,8 +705,8 @@ public class SoftwarEngineerAndPractice {
                                                 
                                                 //NO BOSS SKILLS
                                                 EdmgDealt = bigBoi.bossOneSkills(rand.nextInt(2), 5 , player.stats[1], 50, 35);
-                                                player.stats[0] -= EdmgDealt;
-                                                if (player.stats[0]<=0) {
+                                                player.stats[1] -= EdmgDealt;
+                                                if (player.stats[1]<=0) {
                                                     System.out.println("YOU DIED");
                                                     System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                     area1_cleared = true;
@@ -816,8 +816,8 @@ public class SoftwarEngineerAndPractice {
                                                         if(skillCarry == 0){
                                                             EdmgDealt = rand.nextInt(a1_enemy.enemyStats[2]);
                                                             System.out.println("The enemy deals " + EdmgDealt + " damage to you!");
-                                                            player.stats[0] -= EdmgDealt;
-                                                            if (player.stats[0]<=0) 
+                                                            player.stats[1] -= EdmgDealt;
+                                                            if (player.stats[1]<=0) 
                                                             {
                                                                 System.out.println("YOU DIED");
                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
@@ -885,7 +885,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[1] != 0){
                                                                         System.out.println("You have healed " + array[1] + " health!");
-                                                                        player.stats[0] += array[1];
+                                                                        player.stats[1] += array[1];
                                                                     }
                                                                     if (array[2] != 0){
                                                                         System.out.println("The enemy's turn has been skipped!");
@@ -903,8 +903,8 @@ public class SoftwarEngineerAndPractice {
                                                                         if(array [3] == 0){
                                                                             EdmgDealt = rand.nextInt(a1_enemy.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -920,8 +920,8 @@ public class SoftwarEngineerAndPractice {
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -1260,7 +1260,7 @@ public class SoftwarEngineerAndPractice {
                              int area2_encounter;
                              area2_encounter = area2.area_2_Encounter(rand.nextInt(4), player.stats[4], player.name); /////////////////ERROR///////////////////////
                              if(area2_encounter<1000)
-                                 player.stats[0] = player.stats[0] - area2_encounter;
+                                 player.stats[1] = player.stats[1] - area2_encounter;
                              
                                  else if(area2_encounter == 2221)
                              {
@@ -1314,8 +1314,8 @@ public class SoftwarEngineerAndPractice {
                                                      break OUTER;
                                                  }
                                                  System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                 player.stats[0] -= EdmgDealt;
-                                                 if (player.stats[0]<0) {
+                                                 player.stats[1] -= EdmgDealt;
+                                                 if (player.stats[1]<0) {
                                                      System.out.println("YOU DIED");
                                                      System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                      area2_cleared = true;
@@ -1376,7 +1376,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[1] != 0){
                                                                         System.out.println("You have healed " + array[1] + " health!");
-                                                                        player.stats[0] += array[1];
+                                                                        player.stats[1] += array[1];
                                                                     }
                                                                     if (array[2] != 0){
                                                                         System.out.println("The enemy's turn has been skipped!");
@@ -1394,8 +1394,8 @@ public class SoftwarEngineerAndPractice {
                                                                         if(array [3] == 0){
                                                                             EdmgDealt = rand.nextInt(Giant_Angry_Thing.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -1411,8 +1411,8 @@ public class SoftwarEngineerAndPractice {
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -1529,7 +1529,7 @@ public class SoftwarEngineerAndPractice {
                              }
                              else if(area2_encounter == 2225)
                              {
-                                 player.stats[0] = player.stats[0] - 10;
+                                 player.stats[1] = player.stats[1] - 10;
                                  player.stats[1] = player.stats[1] - 3;
                              }
                              break;
@@ -1562,8 +1562,8 @@ public class SoftwarEngineerAndPractice {
                                                  break OUTER;
                                              }
                                              System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                             player.stats[0] -= EdmgDealt;
-                                             if (player.stats[0]<0) {
+                                             player.stats[1] -= EdmgDealt;
+                                             if (player.stats[1]<0) {
                                                  System.out.println("YOU DIED");
                                                  System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                  area2_cleared = true;
@@ -1673,8 +1673,8 @@ public class SoftwarEngineerAndPractice {
                                                         if(skillCarry == 0){
                                                             EdmgDealt = rand.nextInt(a2_enemy.enemyStats[2]);
                                                             System.out.println("The enemy deals " + EdmgDealt + " damage to you!");
-                                                            player.stats[0] -= EdmgDealt;
-                                                            if (player.stats[0]<=0) 
+                                                            player.stats[1] -= EdmgDealt;
+                                                            if (player.stats[1]<=0) 
                                                             {
                                                                 System.out.println("YOU DIED");
                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
@@ -1742,7 +1742,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[1] != 0){
                                                                         System.out.println("You have healed " + array[1] + " health!");
-                                                                        player.stats[0] += array[1];
+                                                                        player.stats[1] += array[1];
                                                                     }
                                                                     if (array[2] != 0){
                                                                         System.out.println("The enemy's turn has been skipped!");
@@ -1760,8 +1760,8 @@ public class SoftwarEngineerAndPractice {
                                                                         if(array [3] == 0){
                                                                             EdmgDealt = rand.nextInt(a2_enemy.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -1777,8 +1777,8 @@ public class SoftwarEngineerAndPractice {
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -1868,8 +1868,8 @@ public class SoftwarEngineerAndPractice {
                                                 
                                                 
                                                 EdmgDealt = bigBoi.bossTwoSkills(rand.nextInt(2), 5 , player.stats[1], 100, 35);
-                                                player.stats[0] -= EdmgDealt;
-                                                if (player.stats[0]<=0) {
+                                                player.stats[1] -= EdmgDealt;
+                                                if (player.stats[1]<=0) {
                                                     System.out.println("YOU DIED");
                                                     System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                     area1_cleared = true;
@@ -1979,8 +1979,8 @@ public class SoftwarEngineerAndPractice {
                                                         if(skillCarry == 0){
                                                             EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                             System.out.println("The enemy deals " + EdmgDealt + " damage to you!");
-                                                            player.stats[0] -= EdmgDealt;
-                                                            if (player.stats[0]<=0) 
+                                                            player.stats[1] -= EdmgDealt;
+                                                            if (player.stats[1]<=0) 
                                                             {
                                                                 System.out.println("YOU DIED");
                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
@@ -2048,7 +2048,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[1] != 0){
                                                                         System.out.println("You have healed " + array[1] + " health!");
-                                                                        player.stats[0] += array[1];
+                                                                        player.stats[1] += array[1];
                                                                     }
                                                                     if (array[2] != 0){
                                                                         System.out.println("The enemy's turn has been skipped!");
@@ -2066,8 +2066,8 @@ public class SoftwarEngineerAndPractice {
                                                                         if(array [3] == 0){
                                                                             EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -2083,8 +2083,8 @@ public class SoftwarEngineerAndPractice {
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -2418,8 +2418,8 @@ public class SoftwarEngineerAndPractice {
                              area3_encounter = area3.area_3_Encounter(rand.nextInt(4), player.stats[2], player.name);
                              if(area3_encounter< 75)
                              {
-                                 player.stats[0] = player.stats[0] - area3_encounter;
-                                 if(player.stats[0]<=0)
+                                 player.stats[1] = player.stats[1] - area3_encounter;
+                                 if(player.stats[1]<=0)
                                  {
                                      System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                      area3_cleared = true;
@@ -2458,8 +2458,8 @@ public class SoftwarEngineerAndPractice {
                                                  break OUTER;
                                              }
                                              System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                             player.stats[0] -= EdmgDealt;
-                                             if (player.stats[0]<0) {
+                                             player.stats[1] -= EdmgDealt;
+                                             if (player.stats[1]<0) {
                                                  System.out.println("YOU DIED");
                                                  System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                  area2_cleared = true;
@@ -2569,8 +2569,8 @@ public class SoftwarEngineerAndPractice {
                                                         if(skillCarry == 0){
                                                             EdmgDealt = rand.nextInt(a3_enemy.enemyStats[2]);
                                                             System.out.println("The enemy deals " + EdmgDealt + " damage to you!");
-                                                            player.stats[0] -= EdmgDealt;
-                                                            if (player.stats[0]<=0) 
+                                                            player.stats[1] -= EdmgDealt;
+                                                            if (player.stats[1]<=0) 
                                                             {
                                                                 System.out.println("YOU DIED");
                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
@@ -2638,7 +2638,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[1] != 0){
                                                                         System.out.println("You have healed " + array[1] + " health!");
-                                                                        player.stats[0] += array[1];
+                                                                        player.stats[1] += array[1];
                                                                     }
                                                                     if (array[2] != 0){
                                                                         System.out.println("The enemy's turn has been skipped!");
@@ -2656,8 +2656,8 @@ public class SoftwarEngineerAndPractice {
                                                                         if(array [3] == 0){
                                                                             EdmgDealt = rand.nextInt(a3_enemy.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -2673,8 +2673,8 @@ public class SoftwarEngineerAndPractice {
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -2766,8 +2766,8 @@ public class SoftwarEngineerAndPractice {
                                                 
                                                 
                                                 EdmgDealt = bigBoi.bossTwoSkills(rand.nextInt(2), 5 , player.stats[1], 50, 35);
-                                                player.stats[0] -= EdmgDealt;
-                                                if (player.stats[0]<=0) {
+                                                player.stats[1] -= EdmgDealt;
+                                                if (player.stats[1]<=0) {
                                                     System.out.println("YOU DIED");
                                                     System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                     area1_cleared = true;
@@ -2877,8 +2877,8 @@ public class SoftwarEngineerAndPractice {
                                                         if(skillCarry == 0){
                                                             EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                             System.out.println("The enemy deals " + EdmgDealt + " damage to you!");
-                                                            player.stats[0] -= EdmgDealt;
-                                                            if (player.stats[0]<=0) 
+                                                            player.stats[1] -= EdmgDealt;
+                                                            if (player.stats[1]<=0) 
                                                             {
                                                                 System.out.println("YOU DIED");
                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
@@ -2946,7 +2946,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[1] != 0){
                                                                         System.out.println("You have healed " + array[1] + " health!");
-                                                                        player.stats[0] += array[1];
+                                                                        player.stats[1] += array[1];
                                                                     }
                                                                     if (array[2] != 0){
                                                                         System.out.println("The enemy's turn has been skipped!");
@@ -2964,8 +2964,8 @@ public class SoftwarEngineerAndPractice {
                                                                         if(array [3] == 0){
                                                                             EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
@@ -2981,8 +2981,8 @@ public class SoftwarEngineerAndPractice {
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
-                                                                            player.stats[0] -= EdmgDealt;
-                                                                            if (player.stats[0]<=0) {
+                                                                            player.stats[1] -= EdmgDealt;
+                                                                            if (player.stats[1]<=0) {
                                                                                 System.out.println("YOU DIED");
                                                                                 System.out.println("\n\n----------------------------G A M E   O V E R----------------------------\n\n");
                                                                                 area1_cleared = true;
