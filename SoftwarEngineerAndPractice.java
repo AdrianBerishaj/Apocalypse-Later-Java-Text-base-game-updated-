@@ -20,7 +20,7 @@ public class SoftwarEngineerAndPractice {
         player.getStarterEquip();
         player.showStats();
         player.showEquip();
-        player.changeRep(0);
+        player.changeRep(1);
         player.gainExp(100);
         player.gainExp(100);
         player.showStats();
@@ -2765,7 +2765,7 @@ public class SoftwarEngineerAndPractice {
                                                 }
                                                 
                                                 
-                                                EdmgDealt = bigBoi.bossTwoSkills(rand.nextInt(2), 5 , player.stats[1], 50, 35);
+                                                EdmgDealt = bigBoi.bossThreeSkills(rand.nextInt(2), 5 , player.stats[1], 50, 35);
                                                 player.stats[1] -= EdmgDealt;
                                                 if (player.stats[1]<=0) {
                                                     System.out.println("YOU DIED");
