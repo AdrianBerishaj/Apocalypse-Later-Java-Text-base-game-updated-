@@ -1835,7 +1835,7 @@ public class SoftwarEngineerAndPractice {
                              } //CHEST END
                              break;
                              case 3:
-                                Enemy bigBoi = new Enemy(5, 200, 50, 20);
+                                Enemy bigBoi = new Enemy(10, 200, 50, 20);
                                 skillCarry = 0;
                                  System.out.println("\n\n----------------------------I T ' S   B O S S   T I M E   B O i S----------------------------");
                                 System.out.println("combat commands can be pulled up at any time by typing \"combat help\"");
@@ -1977,7 +1977,7 @@ public class SoftwarEngineerAndPractice {
                                                          break;
                                                      }
                                                         if(skillCarry == 0){
-                                                            EdmgDealt = rand.nextInt(a2_enemy.enemyStats[2]);
+                                                            EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                             System.out.println("The enemy deals " + EdmgDealt + " damage to you!");
                                                             player.stats[0] -= EdmgDealt;
                                                             if (player.stats[0]<=0) 
@@ -2035,8 +2035,8 @@ public class SoftwarEngineerAndPractice {
                                                                     array = skill.use(player.lvl);
                                                                     if(array[0] != 0){
                                                                         System.out.println("The enemy has taken " + array[0] + " damage!");
-                                                                        a2_enemy.enemyStats[1] -= array[0];
-                                                                        if (a2_enemy.enemyStats[1]<0) {
+                                                                        bigBoi.enemyStats[1] -= array[0];
+                                                                        if (bigBoi.enemyStats[1]<0) {
                                                                             System.out.println("ENEMY DEFEATED!!!");
                                                                             System.out.println("\n\n----------------------------ENEMY HAS BEEN Y E E T E D----------------------------\n\n");
                                                                             player.healthRegen();
@@ -2064,7 +2064,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[2] == 0 || skillCarry == 0){
                                                                         if(array [3] == 0){
-                                                                            EdmgDealt = rand.nextInt(a2_enemy.enemyStats[2]);
+                                                                            EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
                                                                             player.stats[0] -= EdmgDealt;
                                                                             if (player.stats[0]<=0) {
@@ -2079,7 +2079,7 @@ public class SoftwarEngineerAndPractice {
                                                                             }
                                                                         }
                                                                         else{
-                                                                            EdmgDealt = rand.nextInt(a2_enemy.enemyStats[2]);
+                                                                            EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
@@ -2875,7 +2875,7 @@ public class SoftwarEngineerAndPractice {
                                                          break;
                                                      }
                                                         if(skillCarry == 0){
-                                                            EdmgDealt = rand.nextInt(a2_enemy.enemyStats[2]);
+                                                            EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                             System.out.println("The enemy deals " + EdmgDealt + " damage to you!");
                                                             player.stats[0] -= EdmgDealt;
                                                             if (player.stats[0]<=0) 
@@ -2933,8 +2933,8 @@ public class SoftwarEngineerAndPractice {
                                                                     array = skill.use(player.lvl);
                                                                     if(array[0] != 0){
                                                                         System.out.println("The enemy has taken " + array[0] + " damage!");
-                                                                        a2_enemy.enemyStats[1] -= array[0];
-                                                                        if (a2_enemy.enemyStats[1]<0) {
+                                                                        bigBoi.enemyStats[1] -= array[0];
+                                                                        if (bigBoi.enemyStats[1]<0) {
                                                                             System.out.println("ENEMY DEFEATED!!!");
                                                                             System.out.println("\n\n----------------------------ENEMY HAS BEEN Y E E T E D----------------------------\n\n");                                              
                                                                             player.healthRegen();
@@ -2962,7 +2962,7 @@ public class SoftwarEngineerAndPractice {
                                                                     }
                                                                     if(array[2] == 0 || skillCarry == 0){
                                                                         if(array [3] == 0){
-                                                                            EdmgDealt = rand.nextInt(a2_enemy.enemyStats[2]);
+                                                                            EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                                             System.out.println("The enemy does " + EdmgDealt + " damage back at you!");
                                                                             player.stats[0] -= EdmgDealt;
                                                                             if (player.stats[0]<=0) {
@@ -2977,7 +2977,7 @@ public class SoftwarEngineerAndPractice {
                                                                             }
                                                                         }
                                                                         else{
-                                                                            EdmgDealt = rand.nextInt(a2_enemy.enemyStats[2]);
+                                                                            EdmgDealt = rand.nextInt(bigBoi.enemyStats[2]);
                                                                             double EdmgredDealt = (double)(EdmgDealt * array[3] / 100);
                                                                             System.out.println("The enemy does " + EdmgredDealt + " damage back at you!");
                                                                             System.out.println("They did " + array[3] + "% reduced damage because of your skill!");
