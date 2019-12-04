@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Enemy {
      String enemyType[] = {"Big mossy boi", "Colossal Forest Spider", "Forest Gremlin"};
      String enemyType2[] = {"Tribal Demon", "Kurtz's Underling", "Undead Dude"};
-    String enemyType3[] = {"Sp00ky boi", "Zambie", "Ball of Bones"};
+    String enemyType3[] = {"Tibal leader", "Kurtz's Follower", "The Darkness of Humanity"};
     
     int lvl, enemyHealth, dmg, armr ;
     Random rand = new Random();
@@ -187,35 +187,35 @@ public class Enemy {
        return Bdmg;
    }
    
-   public int bossThreeSkills(int skillUse, int pDEX, int pSTR, int pCON, int pCHA, int eSTR)
+   public int bossThreeSkills(int skillUse,int Elvl, int Ehealth, int Edmg, int Earmr)
    {
        int Bdmg = 0;
        String choice;
        switch (skillUse)
        {
            case 0:
-               System.out.println("The mob of girls appear to start hysterically crying! What will you do? \n\n\t" + 
-                       "1. Try to calm them down!   2. Try to take this opportunity to attack them!     (type 1 or 2 for decision)");
+               System.out.println("Kurtz is reading what sounds like poem stanzas. What will you do? \n\n\t" + 
+                       "1. Try to disrupt his incantations   2. Try to take this opportunity to attack him!     (type 1 or 2 for decision)");
                while(true)
                {
                    choice = scan.nextLine();
                    if(choice.equals("1"))
                    {
-                       if(rand.nextInt(pCHA)>7) /////////////////////ERROR//////////////////
+                       if(rand.nextInt(25)>7) /////////////////////ERROR//////////////////
                         {
-                            System.out.println("\n\tYou were able to calm down the girls! That was weird.");
+                            System.out.println("\n\tYou started shouting and Kurtz seems surprised.");
                         }
                        else
                        {
-                           Bdmg = rand.nextInt(eSTR) + (eSTR/2);
-                           System.out.println("\n\tYou couldn't calm them down, though they appreciate the effort! They stare at you with their tear-filled eyes and you feel extremely uncomfortable. You took " + Bdmg + " damage!");
+                           Bdmg = rand.nextInt(Edmg) + (Edmg/2);
+                           System.out.println("\n\tYou try to disrupt him, but it seems like a wasted effort. Kurtz has inhuman Focus! A shadow surrounds you. It doesnt hurt you physically but you brain feels like its being broken into.  You take " + Bdmg + " damage!");
                        }
                        break;
                    }
                    else if(choice.equals("2"))
                    {
-                       Bdmg = ((rand.nextInt(eSTR) + (eSTR/2))*3);
-                       System.out.println("\n\tWow, that's rude. They simply dismiss your attack as it appears that they were charging a powerful spell this whole time!  You took " + Bdmg + " damage!");
+                       Bdmg = ((rand.nextInt(Edmg) + (Edmg/2))*3);
+                       System.out.println("\n\tHe ignores your attack as it seems his incantation is complete!  You took " + Bdmg + " damage!");
                        break;
                    }
                    else
@@ -223,33 +223,33 @@ public class Enemy {
                }
                break;
            case 1:
-               System.out.println("The weird children appear to be combining together to make one huge monstrosity! Children nowadays. How do you react? \n\n\t" + 
-                       "1. Take a defensive stance!     2. Try to bring the beast down before it fully metamorphosizes!     3. Gawk at how ugly it is!      (type 1, 2, or 3 for decision)");
+               System.out.println("It seems as if the darkness is merging with Kurtz. This might be big trouble. How do you react? \n\n\t" + 
+                       "1. Take a defensive stance!     2. Try to stop him by absorbing the Darkness yourself!     3. Stare at the monstrosity before you!      (type 1, 2, or 3 for decision)");
                while(true)
                {
                    choice = scan.nextLine();
                    if(choice.equals("1"))
                    {
-                       Bdmg = ((rand.nextInt(eSTR) + (eSTR/2))*3) - pSTR - pCON;
-                       System.out.println("\n\tYou have enough time to take a defensive stance and shield yourself from a powerful blow from their now huge fist,\n\t but still take " + Bdmg + " damage! They fall back out into individual girls after they hit you.");
+                       Bdmg = ((rand.nextInt(Edmg) + (Edmg/2))*3) - rand.nextInt(100);
+                       System.out.println("\n\tYou have enough time to take a defensive stance and shield yourself from a powerful blow from his now huge fist,\n\t but still take " + Bdmg + " damage! They fall back out into individual girls after they hit you.");
                        break;
                    }
                    else if(choice.equals("2"))
                    {
-                       if(rand.nextInt(pDEX)>8){
-                           System.out.println("\n\tYou are able to reach out and pull back one of the girls in time! This interrupts their transformation and they all fall back!");
+                       if(rand.nextInt(25)>8){
+                           System.out.println("\n\tYou are able to absorb the darkness yourself! Youre scared but soon realize that the darkness was already part of you");
                        }
                        else{
-                           Bdmg = ((rand.nextInt(eSTR) + (eSTR/2))*3);
-                           System.out.println("\n\tYou aren't quick enough to stop them from transforming! They kick you away as hard as they can in their enlargened\n\t state before returning to their original individual children selves. You took " + Bdmg + " damage!");
+                           Bdmg = ((rand.nextInt(Edmg) + (Edmg/2))*3);
+                           System.out.println("\n\tYou aren't quick enough to stop him from transforming! he kicks you away as hard as he can in his enlargened\n\t state before returning to the Kurtz you seem to know all too well . You took " + Bdmg + " damage!");
                        }
                        break;
                    }
                    else if(choice.equals("3"))
                    {
-                       Bdmg = ((rand.nextInt(eSTR) + (eSTR/2))*4);
-                       System.out.println("\n\tThat's really mean, they're just trying to live their abnormal lives you meanie! Once they fully transform, they see how you're looking at them and scream at you!"
-                               + "\n\t They bring their now mighty fist down for one attack before all falling out back into their original formation. You took " + Bdmg + " damage!");
+                       Bdmg = (rand.nextInt(Edmg)*4);
+                       System.out.println("\n\tHe sees fear and judgement in your eyes, these are what Kurtz despises most!"
+                               + "\n\t He brings his almighty fist down for one attack before all falling out back into his original form. You took " + Bdmg + " damage!");
                        break;
                    }
                    else
@@ -260,112 +260,6 @@ public class Enemy {
        return Bdmg;
    }
    
-   public int[] bossFourSkills(int skillUse, int[] pSTATS, int[] eSTATS, boolean TNR)
-   {
-       int[] newPSTATS = new int[pSTATS.length];
-       System.arraycopy(pSTATS, 0, newPSTATS, 0, newPSTATS.length);
-       int mES = eSTATS[2], lPS = newPSTATS[1], dmg = 0, dodge;
-       String choice;
-       switch (skillUse)
-       {
-           case 0:
-               if(TNR == true)
-               {
-                   System.out.println("\n\t\"I will SUCC the power right out of you!\"\n\n\tEvil Boi drained your stats!");
-                   for(int i = 0; i<pSTATS.length; i++)
-                   {
-                       pSTATS[i] -= rand.nextInt(6)+1;
-                   }     
-               }
-               else if(TNR == false)
-               {
-                   dmg = rand.nextInt(eSTATS[2]) + 10;
-                   newPSTATS[0] -= dmg;
-                   System.out.println("\n\tEvil Boi simply snaps his fingers and a series of explosions hit you!\n\tYou took " + dmg + " damage!");
-               }
-               break;
-           case 1:
-               if(TNR == true)
-               {
-                   System.out.println("\n\n\t\"I will exploit your biggest weaknesses!\"");
-                   for(int i = 2; i<newPSTATS.length; i++) //find lowest player stat
-                   {
-                       if(lPS>newPSTATS[i])
-                           lPS = newPSTATS[i];
-                   }
-                    for(int i = 3; i<eSTATS.length; i++) //find highest enemy stat
-                   {
-                       if(mES<eSTATS[i])
-                           mES = eSTATS[i];
-                   }
-                    newPSTATS[0] -= ((mES - lPS) * 5);
-                    System.out.println("\n\tEvil Boi used the power of his strongest stat against your weakest stat and blasted you\n\twith a powerful beam!"
-                            + " You took " + ((mES - lPS) * 5) + " damage!");
-               }
-               else if(TNR == false)
-               {
-                   System.out.println("\n\t\"Fear my lazer beams!\"\n\tEvil Boi shoots a massive lazer toward you!\n\tDo you: "
-                           + "1. shield from the attack    2. attempt dodging it");
-                    while(true)
-               {
-                   choice = scan.nextLine();
-                   if(choice.equals("1"))
-                   {
-                       dmg = (rand.nextInt(eSTATS[2] + 30)) - newPSTATS[1] - newPSTATS[3];
-                       newPSTATS[0] -= dmg;
-                       System.out.println("");
-                       break;
-                   }
-                   else if(choice.equals("2"))
-                   {
-                       if(rand.nextInt(newPSTATS[2])>10)
-                        {
-                            System.out.println("\n\tYou managed to dodge his lazer attack!");
-                        }
-                       else
-                       {
-                           dmg = (rand.nextInt(eSTATS[2] + 30));
-                           newPSTATS[0] -= dmg;
-                           System.out.println("\n\n\tYou failed to dodge the lazer beam! You took " + dmg + " damage!");
-                       }
-                       break;
-                   }
-                   else
-                   {
-                       System.out.println("\n\tPlease type either 1 or 2");
-                   }
-               }
-               }
-               break;
-           case 2:
-               if(TNR == true)
-               {
-                  System.out.println("\n\n\t\"Hey bud, pick a number between 1 and 10\"");
-                  choice = scan.nextLine();
-                  dmg = rand.nextInt(eSTATS[2] * 2);
-                  newPSTATS[0] -= dmg;
-                  System.out.println("\n\n\t\"LooL I didn't even have a number in mind. Die\"\n\n\tEvil Boi's eyes glow red, then he snaps his fingers."
-                          + "\n\tA massive line of explosions blast right into you!\n\n\tYou took " + dmg + " damage!");
-               }
-               else if(TNR == false)
-               {
-                   System.out.println("\n\n\t\"Bet your armor isn't as cool as mine\"\n\tEvil Boi proceeds to show off his crocs. As you were mesmerized by the crocs, "
-                           + "\n\tHe shoots a lazer beam at you!");
-                   dodge = rand.nextInt(2);
-                   if(dodge == 0)
-                   {
-                       System.out.println("\n\n\tYou managed to dodge the attack!");
-                   }
-                   else if(dodge == 1)
-                   {
-                       dmg = eSTATS[2];
-                       newPSTATS[0] -= dmg;
-                       System.out.println("\n\n\tYou didn't see the attack coming! You took " + dmg + " damage!");
-                   }
-               }
-               break;
-       }
-       return newPSTATS;
-   }
+   
          
 }
