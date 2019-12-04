@@ -287,7 +287,7 @@ public class SoftwarEngineerAndPractice {
                                                                         if (rogue.enemyStats[1]<0) {
                                                                             System.out.println("ENEMY DEFEATED!!!");
                                                                             System.out.println("\n\n----------------------------ENEMY HAS BEEN Y E E T E D----------------------------\n\n");
-                                                                            System.out.println("\n\n\tUpon killing the bounty hunter, you've looted his Bandit Dagger!");
+                                                                            System.out.println("\n\n\tUpon killing the bounty hunter, you've looted his Katana!");
                                                                             Items Katana = new Items("Katana", 1, 0, 10, 0, 0, 0); //gives +2 str, +5 dex
                                                                             player.inventory = Katana.ADDinventory(player.inventory);
                                                                             player.healthRegen();
@@ -876,9 +876,6 @@ public class SoftwarEngineerAndPractice {
                                                                         if (a1_enemy.enemyStats[1]<0) {
                                                                             System.out.println("ENEMY DEFEATED!!!");
                                                                             System.out.println("\n\n----------------------------ENEMY HAS BEEN Y E E T E D----------------------------\n\n");
-                                                                            System.out.println("\n\n\tUpon killing the bounty hunter, you've looted his Bandit Dagger!");
-                                                                            Items Katana = new Items("Katana", 1, 0, 10, 0, 0, 0); //gives +2 str, +5 dex
-                                                                            player.inventory = Katana.ADDinventory(player.inventory);
                                                                             player.healthRegen();
                                                                             player.allSkillRecharge();
                                                                             int gain = rand.nextInt(15) + 15;
@@ -2042,9 +2039,6 @@ public class SoftwarEngineerAndPractice {
                                                                         if (a2_enemy.enemyStats[1]<0) {
                                                                             System.out.println("ENEMY DEFEATED!!!");
                                                                             System.out.println("\n\n----------------------------ENEMY HAS BEEN Y E E T E D----------------------------\n\n");
-                                                                            System.out.println("\n\n\tUpon killing the bounty hunter, you've looted his Bandit Dagger!");
-                                                                            Items Katana = new Items("Katana", 1, 0, 10, 0, 0, 0); //gives +2 str, +5 dex
-                                                                            player.inventory = Katana.ADDinventory(player.inventory);
                                                                             player.healthRegen();
                                                                             player.allSkillRecharge();
                                                                             int gain = rand.nextInt(15) + 15;
@@ -2942,10 +2936,7 @@ public class SoftwarEngineerAndPractice {
                                                                         a2_enemy.enemyStats[1] -= array[0];
                                                                         if (a2_enemy.enemyStats[1]<0) {
                                                                             System.out.println("ENEMY DEFEATED!!!");
-                                                                            System.out.println("\n\n----------------------------ENEMY HAS BEEN Y E E T E D----------------------------\n\n");
-                                                                            System.out.println("\n\n\tUpon killing the bounty hunter, you've looted his Bandit Dagger!");
-                                                                            Items Katana = new Items("Katana", 1, 0, 10, 0, 0, 0); //gives +2 str, +5 dex
-                                                                            player.inventory = Katana.ADDinventory(player.inventory);
+                                                                            System.out.println("\n\n----------------------------ENEMY HAS BEEN Y E E T E D----------------------------\n\n");                                              
                                                                             player.healthRegen();
                                                                             player.allSkillRecharge();
                                                                             int gain = rand.nextInt(15) + 15;
