@@ -74,7 +74,7 @@ public class Area<E>
                break;
            case 1: //value can be 0-50
                System.out.println("\n\tSoldiers seem to be blocking most the river.  They dont look intimidating");
-               if(rand.nextInt(pRep) > 0)
+               if(pRep > 0)
                {
                    System.out.println("\tluckily, the soldiers didnt find anything suspicious with you so they let you pass");
                }
@@ -89,29 +89,29 @@ public class Area<E>
                        + "\n\tHe notices you.\n\n\t\"Wait a minute... you look familiar... State your name!\""
                        + "\n\n\tWhat do you tell him?");
                String choice = scan.nextLine();
-               if(choice.equals(pName))
+               if(choice.equalsIgnoreCase(pName))
                {
                    int encounter = rand.nextInt(2);
                    if(encounter == 0)
                    {
-                       System.out.println("\n\n\t\"Oh, I know you! you're one of the expedition leaders here to take out Big Boi!"
+                       System.out.println("\n\n\t\"Oh, the name sounds familiar.  Arent you the guy who took out that awful tyrant a couple years back?"
                                + "\n\tPlease, take this, I wont be of any use on this expedition from here on out, Good luck to you " + pName + "!\""
-                                       + "\n\n\tYou've gained Bandit Dagger!");
+                                       + "\n\n\tYou've gained a Katana!");
                        value = 1111;
                    }
                    else if (encounter == 1)
                    {
-                       System.out.println("\n\n\t\"I knew it! you're the guy from the bounty! GET OVER HERE!\"");
+                       System.out.println("\n\n\t\"I knew it, you're after Lord Kurtz!! \"");
                        value = 1112;        
                    }
                }
-               else if(!choice.equals(pName))
+               else if(!choice.equalsIgnoreCase(pName))
                {
                    System.out.println("\n\n\t\"Eh... I don't know you. Could've sworn you looked like someone I know. Carry on traveller");
                }
                break;
            case 3: //value can be either 0 or 1113: 1113 - add item "DEX_Bost Potion" in main
-               System.out.println("\n\n\tYou enter the room and find this very delactable looking bag on the floor that looks like it contains something amazing"
+               System.out.println("\n\n\tYou enter the room and find this very delectable looking bag on the floor that looks like it contains something amazing"
                        + "\n\tWhat do you do? 1. open   2. leave it be   (type 1  or  2)");
                String decision;
        OUTER:
@@ -146,7 +146,7 @@ public class Area<E>
    
    
    
-   public int area_2_Encounter(int type, int pInt, String pName)
+   public int area_2_Encounter(int type, int pRep, String pName)
    {
        int value = 0;
        switch (type)
@@ -157,35 +157,37 @@ public class Area<E>
            case 1://value can be 0-50
                System.out.println("\n\n\tYou've rustled your ways through trees and such, when all a sudden a massive snake falls right on top of you!");
                
-               if(rand.nextInt(pInt) > 7) //////////////////////ERROR////////////////////
+               if(rand.nextInt(16) > 7) //////////////////////ERROR////////////////////
                {
-                   System.out.println("\tYou were smart enough what to do in this situation, so you were able to get out of it safely");
+                   System.out.println("\tYou got lucky, the snakes couldnt keep up with you're superior human brain");
                }
                else
                {
                    value = rand.nextInt(41) + 10;
-                   System.out.println("\tYou were not smart enough what to do in this situation, casuing the snake to bite! You have taken " + value + " damage!");
+                   System.out.println("\tThe snakes have outsmarted you, they bite! You have taken " + value + " damage!");
                }        
                break;
                
            case 2://value can be 2221 or 2222: 2221 - sub 3 from all stats,  2222 - add 3 to all stats
-               System.out.println("\n\n\tYou find yourself in an open area, with a forest spirit of some sort floating above a small lake. She motions you to confront her"
-                       + "\n\t\"Traveler lost in the woods... how did you even end up in these woods... Who are you? And why are you here? (she wants to know your name)");
+               System.out.println("\n\n\tA spirit orb rises from the forest ground.  It looks so pure, as if it is beckoning you to come foward"
+                       + "\n\t\"Traveler, all I know is names and the purity of them.  Please.....Tell me.... What is your name? (You are allowed to lie)");
                String name = scan.nextLine();
-               if(name.equals(pName))
+               if(name.equalsIgnoreCase(pName))
                {
-                   System.out.println("\n\n\tThe spirit suddenly glows red and becomes visably angry\n\tYOU! YOU ARE THE ONE WHO HAS DAMAGED THIS ONCE PEACEFUL LAND!"
-                           + "\n\tYOU ARE THE ONE WHO IS RESPONSIBLE FOR EVERYTHING BAD! I CURSE YOU " + pName + "! I CURSE YOU WITH ETERNAL DEVISTATION!"
+                   System.out.println("\n\n\tThe spirit suddenly glows red and becomes visably angry\n\tYOU! YOU ARE NO HUMAN OF PURITY, THE HEART OF DARKNESS WILL CONSUME YOU!"
+                           + "\n\tYOU ARE THE DOWNFALL OF HUMAN MORALS! I CURSE YOU " + pName + "! YOU WILL NEVER OBTAIN THE TRUE HEART OF DARKNESS NOR THE POWER THAT COMES WITH IT!"
                                    + "\n\tThe spirit vanishes into thin air, and all a sudden you are hit with an excruciating, life-sucking force."
-                                   + "\n\tYour stats have been drained!");
+                                   + "\n\tYour stats have been drained!"
+                                   +"\n\tYou think to yourself,  the heart of darkness, what does that even mean??");
                    value = 2221;
                }
-               else if(!name.equals(pName))
+               else if(!name.equalsIgnoreCase(pName))
                {
-                   System.out.println("\n\n\t\"Poor thing, how could you ever end up in this accursed land... Please, take my blessing. May it give you"
-                           + "\n\tthe power to escape this place.\n\tThe spirit vanishes into thin air, and all a sudden you are hit with a powerful, super-energizing force"
+                   System.out.println("\n\n\t\"Poor thing, one with a name of such purity should never have travelled to this forest"
+                           + "\n\tToo many have been lost to this dark forest, but i will not allow it to happen again.\n\tThe spirit vanishes into thin air, and all a sudden you are hit with a powerful, super-energizing force"
                            + "\n\tYour stats have been boosted!");
                    value = 2222;
+                   
                }
                break;
            case 3://value can be 2223, 2224, 2225: 2223 - add 5 to INT,  2224 - add 5 to INT + initiate battle in main,  2225 - sub 10 HP and sub 3 STR
@@ -208,7 +210,7 @@ public class Area<E>
                    else if(random == 1)
                    {
                        System.out.println("\n\n\tYou say screw it and devour them all. You have satisified your hunger, but not only that, you feel like"
-                               + "\n\tyou've gained a surge of knowledge, almost like... a bunch of memories. \n\t Your Intelligence grew!"
+                               + "\n\tyou've gained a surge of knowledge, almost like... a bunch of memories. \n\t Your Stats grew!"
                                + "\n\n\tHowever, all a sudden, you hear a loud shrieking noise above you. You look and see this gigantic creature, shrieking at you"
                                + "\n\twith an intent to kill you. You question to yourself \"I... prooooobably ate its children\" (you did :/ )");
                        value = 2224;
@@ -231,82 +233,14 @@ public class Area<E>
    }
    
    
-   
-   public int area_3_Encounter(int type, int pDex, String pName)
-   {
-       int value = 0;
-       switch (type)
-       {
-           case 0://value remains 0
-               System.out.println("\n\tyou move on, nothing eventful happens.");
-                        break;
-           case 1://value can be 0-999
-               System.out.println("\n\tIn the corridor you enter, A large ball of bones rolls toward you!");
-               if(rand.nextInt(pDex) > 1)
-               {
-                   System.out.println("\tIt was luckily going slow enough for you to step out of it's way ez pz");
-               }
-               else
-               {
-                   value = rand.nextInt(1000);
-                   System.out.println("\tYou were stunned by the sheer horror and were run over by the ball of bones! You have taken " + value + " damage!"
-                           + "\n\t(P.S - that's just... hilariously unlucky");
-               }
-               break;
-           case 2://value can be 0 or 3331: 3331 - set boolean "TrueNameRevealed" to true
-               System.out.println("\n\n\tYou enter the next cell, only to find a wizard boi at the end of the room, reading. \n\t\"Ah, it's you. I was "
-                       + "wondering if you'd make it this far. The escape you seek though is far from here, but I can help you. This here book is\n\ta database"
-                       + "of all people of all kinds. Just tell me your true name, and I can grant you power to help you on your journey\" (enter a name) ");
-               String name = scan.nextLine();
-               if(name.equals(pName))
-               {
-                   System.out.println("\n\n\t\"Heh heh heh...ooohhh, You complete idiot\"\n\tThe wizrd smirks, shuts book in his hand, then vanishes into thin air"
-                           + "\n\n\t\".....Probably wasn't a good idea I guess\"\n");
-                   value = 3331;
-               }
-               if(!name.equals(pName))
-               {
-                   System.out.println("\n\n\tThe wizard looks angry, then violently shuts his book.\n\t\"Curses... You're lying\"\n\tThe wizard then vanishes into thin air!"
-                           + "\n\n\t.....well that was weird");
-               }
-               break;
-           case 3://value can be 0 or 3332: 3332 - initate battle in Main
-               System.out.println("\n\n\tYou encounter a wicked looking alter with a little portal like object in it's center. \n\tYou sense terrible evil coming from "
-                       + "/n/tthe portal, and can faintly hear screaming coming from it. \n\tWhat will you do? 1. LooL go inside   2. that ain't happening (type 1 or 2)");
-               String decision;
-       OUTER:
-       while (true) {
-           decision = scan.nextLine();
-           switch (decision) {
-               case "1":
-                   System.out.println("\n\n\tFor some profound reason, you're like \"yeet\" then swan dived right into the portal."
-                           + "\n\tyou fall a decent height, land, then end up in this... void of some sort. Everything is black, all around. Then all a sudden, a great flash"
-                           + "\n\tappears off in the distance, and a unholy shriek is heard followed by loud stomping heading your way!\n\n\t\"well... imma die\"\n\n");
-                   value = 3332;
-                   break OUTER;
-               case "2":
-                   System.out.println("You, a sane person ,decide you shouldn't yeet right on into a hellish portal, and move on");
-                   break OUTER;
-               default:
-                   System.out.println("type either 1 or 2 for your decision");
-                   break;
-           }
-       }
-               break;
-       }
-       return value;
-   }
-   
-   
-   
-   public int area_4_Encounter(int type, int pSTR, int pDEX, int pCON)
+   public int area_3_Encounter(int type, int pRep, String pName)
    {
        int value = 0;
        switch (type)
        {
            case 0://value can be 0-75
                int bolt = rand.nextInt(51) + 25;
-               int evade = rand.nextInt(pDEX);
+               int evade = rand.nextInt(25);
                System.out.println("\n\n\tThe rediculous figure's eyes glow red off in the distance. Suddenly, a massive bolt comes your way!"
                        + "\n\n\tDo you:   1. Shield yourself from the bolt(take some damage)     2. take a huge risk and try evading it(take all or no damage)"
                        + "\n\t(type 1 or 2 for decision)");
@@ -316,7 +250,7 @@ public class Area<E>
            decision = scan.nextLine();
            switch (decision) {
                case "1":
-                   value = bolt - pSTR - pCON;
+                   value = bolt - 20;
                    System.out.println("\n\tYou shield yourself from the bolt, but take " + value + " damage!");
                    break OUTER;
                case "2":
@@ -338,10 +272,10 @@ public class Area<E>
                
                         break;
            case 1://value can be 0 or 999999999 LooL
-               System.out.println("\n\n\tThe floating floor beneath you crumbles and is about to shatter!");
-               if(rand.nextInt(pDEX) > 1)
+               System.out.println("\n\n\tIt seems as though a sheer force of darkness is causing the floor to give out!");
+               if(rand.nextInt(15) > 1)
                {
-                   System.out.println("\tYou managed to hop to the next platform before you fell into the endless rift, ez pz");
+                   System.out.println("\tIt seems that the darkness stopped, you ask yourself.....Why? Is the Darkness accepting you? ");
                }
                else
                {
