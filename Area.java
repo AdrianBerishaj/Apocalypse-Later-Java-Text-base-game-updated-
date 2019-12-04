@@ -121,7 +121,7 @@ public class Area<E>
                case "1":
                    int random = rand.nextInt(2);
                    if (random == 0) {
-                       System.out.println("\n\tWell whataya know... It contained a potion!\n\tYou've gained DEX_Boost Potion!");
+                       System.out.println("\n\tWell whataya know... It contained a potion!\n\tYou've gained HP Potion!");
                        value = 1113;
                        break OUTER;
                    } else if (random == 1) {
