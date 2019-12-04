@@ -1,6 +1,3 @@
-package software.engineer.and.practice;
-
-
 import java.util.*;
 
 public class Character<E> {
@@ -310,7 +307,7 @@ public class Character<E> {
         }
      }
      public void healthRegen(){
-         this.health = maxHealth;
+         this.stats[1] = this.stats[0];
      }
      public void help()
      {
